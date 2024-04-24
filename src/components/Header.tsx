@@ -26,10 +26,17 @@ export const Header  = () => {
           <>
             <Spacer />
             <Button
+              marginRight='3px'
+              onClick={() => navigate('/infoconta')}
+            >
+              Meus dados
+            </Button>
+            <Button
               onClick={() => logout()}
             >
               Sair
             </Button>
+            
           </>
         )
       }

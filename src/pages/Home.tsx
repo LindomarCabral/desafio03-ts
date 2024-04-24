@@ -1,13 +1,13 @@
 import { Box, Center, Input } from "@chakra-ui/react";
-import { MouseEventHandler, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../components/AppContext";
 import { Card } from "../components/Card";
 import DButton from "../components/DButton";
 import { login } from "../services/login";
 import { getAllLocalStorage } from "../services/storage";
-import { parse } from "path/posix";
-//import { changeLocalStorage } from "../services/storage";
+
+
 
 const Home = () => {
     const [ email, setEmail ] = useState<string>('')
@@ -29,8 +29,7 @@ const Home = () => {
             return alert('Email ou Senha inválidos')
         }
 
-        setIsLoggedIn(true)
-       // changeLocalStorage({ login: true })
+        setIsLoggedIn(true)       
         navigate('/conta/1')
     }
   
